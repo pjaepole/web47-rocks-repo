@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 
 const app = express()
@@ -8,6 +10,9 @@ app.get('/', (req, res)=>{
     res.send(`
     <h1>Web 47 rocks! following guided project vid</h1>
     `)
+})
+app.get('/port', (req, res)=>{
+    res.send(`<div>port is ${PORT}</div>`)
 })
 
 app.listen(PORT, ()=>{
